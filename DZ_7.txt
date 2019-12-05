@@ -1,0 +1,17 @@
+﻿package ru.geekbrains.DZ_1;
+
+import java.util.Scanner; // импорт сканера
+
+public class DZ_7 {
+    //7. Написать метод, которому в качестве параметра передается строка, обозначающая имя.
+    // Метод должен вывести в консоль сообщение «Привет, указанное_имя!».
+    public static void helloYou (String name){
+        System.out.println("Привет, " + name + "!");
+    }
+    public static void main(String[] args) {
+        System.out.println("Введите своё имя!"); // просим пользователя ввести имя
+        Scanner Scan = new Scanner(System.in);   // создав объект типа Scanner, положим в него то, что введёт в консоль пользователь
+        String nameUser = Scan.next(); // создаём переменную строчного типа и положим в него наш объект
+        helloYou(nameUser); // Вызываем наш метод и передаём в него переменную nameUser
+    }
+}
