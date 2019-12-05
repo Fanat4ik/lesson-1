@@ -1,0 +1,20 @@
+﻿package ru.geekbrains.DZ_1;
+
+public class DZ_6 {
+
+    //6. Написать метод, которому в качестве параметра передается целое число.
+    // Метод должен вернуть true, если число отрицательное.
+    public static boolean func (int a){
+        boolean r;
+        if (a < 0) {
+            r = true;
+        }else {
+            r = false;
+        }
+        return r;
+    }
+    public static void main(String[] args) {
+        System.out.println(func(10));
+    }
+}
+// к сожалению не смог ещё найти вопрос на ответ - как выволить true, если число отрицательное и ничего не выводить, если положительное.

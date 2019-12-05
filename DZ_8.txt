@@ -1,0 +1,31 @@
+﻿package ru.geekbrains.DZ_1;
+
+import java.util.Scanner;
+
+public class DZ_8 {
+    //*8. Написать метод, который определяет, является ли год високосным, и выводит сообщение в консоль.
+    // Каждый 4-й год является високосным, кроме каждого 100-го, при этом каждый 400-й – високосный.
+
+    // решаем эту задачу при помощи вложенных условных операторов if
+    public static void bissextile (int year){
+        if((year % 4) == 0){
+            if ((year % 100) == 0){
+                if ((year % 400) == 0){
+                    System.out.println("Год високосный!");
+                }else {
+                    System.out.println("Год не високосный!");
+                }
+            }else {
+                System.out.println("Год високосный!");
+            }
+        }else{
+            System.out.println("Год не високосный!");
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Введите год!"); // просим пользователя ввести имя
+        Scanner Scan = new Scanner(System.in);   // создав объект типа Scanner, положим в него то, что введёт в консоль пользователь
+        int yearUser = Scan.nextInt(); // создаём переменную целочисленного типа и положим в него наш объект
+        bissextile(yearUser); // Вызываем наш метод и передаём в него переменную nameUser
+    }
+}
